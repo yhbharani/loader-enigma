@@ -1,0 +1,51 @@
+<div class="loader-container">
+  <div class="animation-wrapper" [ngSwitch]="loaderId">
+    
+    <!-- Lottie Animation for default case -->
+    <ng-lottie *ngSwitchDefault [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+    
+    
+    <!-- Div for Loader #1 -->
+    <div *ngSwitchCase="1">
+      <div class="random-ring">
+        <div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+
+
+    <!-- Div for Loader #2 -->
+    <div *ngSwitchCase="2">
+      <div class="linear-ring-container" [style.--animation-duration]="duration + 's'">
+        <svg class="progress-ring" width="200" height="200">
+          <!-- Track circle (background) -->
+          <circle class="progress-ring__track" stroke="#e0e0e0" fill="none" stroke-width="20" cx="100" cy="100" r="90"></circle>
+          <!-- Animated circle (progress) -->
+          <circle class="progress-ring__circle" fill="none" stroke-width="20" cx="100" cy="100" r="90"></circle>
+          <!-- Central circle -->
+          <circle class="central-circle" cx="100" cy="100" r="80"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Div for Loader #3 -->
+    <div *ngSwitchCase="3">
+      <div class="linear-ring-container" [style.--animation-duration]="duration + 's'">
+        <svg class="progress-ring" width="200" height="200">
+          <!-- Track circle (background) -->
+          <circle class="progress-ring__track" stroke="#e0e0e0" fill="none" stroke-width="20" cx="100" cy="100" r="90"></circle>
+          <!-- Animated circle (progress) -->
+          <circle class="progress-ring__circle" fill="none" stroke-width="20" cx="100" cy="100" r="90"></circle>
+          <!-- Central circle -->
+          <circle class="central-circle" cx="100" cy="100" r="80"></circle>
+        </svg>
+        <div class="linear-ring-text">{{ currentPercentage }}%</div>
+      </div>
+    </div>
+
+    <!-- Div for Loader #4 -->
+    <div *ngSwitchCase="4">
+      <p>This is a custom div for loader ID 4</p>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="row header">
+  <div class="col reset">
+    <button class="btn btn-primary" (click)="resetSession()">
+      <img src="assets/Back.png" style="width: 24px; margin: 10px;">Reset
+    </button>
+  </div>  
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4 title">
+      Select the loader
+    </div>
+    <div class="col-lg-8">
+      <div class="row cards">
+        <div class="col-lg-3 tile" *ngFor="let loader of loaders">
+          <div class="card" style="width: 18rem;" (click)="selectLoader(loader.id, loader.duration)">
+            <img class="card-img-top" [src]="loader.seen ? 'assets/tick.png' : loader.thumbnail" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-text">{{ loader.name }}</h5>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>

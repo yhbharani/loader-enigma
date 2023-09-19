@@ -1,0 +1,99 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will make the container take the full height of the viewport */
+  }
+  
+  .animation-wrapper {
+    width: 20%; /* Set the width of the wrapper to 50% of its container */
+  }
+  
+  ng-lottie {
+    width: 100%; /* Make the Lottie animation take the full width of its wrapper */
+    height: auto; /* Adjust height automatically based on the animation's aspect ratio */
+  }
+
+
+  /* For Random Ring */
+
+  .random-ring {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  .random-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 20px solid #838383;
+    border-radius: 50%;
+    animation: random-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #838383 transparent transparent transparent;
+  }
+  .random-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .random-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .random-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes random-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  /* For Linear Ring */
+  .linear-ring-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-ring__circle {
+    fill: transparent;
+    stroke: #838383;
+    stroke-width: 20;
+    stroke-dasharray: 628; /* Approximately 2 * 3.14 * 100 (2 times pi times the radius) */
+    stroke-dashoffset: 628; /* Initially set to the same value as stroke-dasharray */
+    animation: fillUp var(--animation-duration, 10s) linear forwards;
+}
+
+.central-circle {
+    fill: #E7E7E7;
+}
+
+.linear-ring-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+@keyframes fillUp {
+    0% {
+        stroke-dashoffset: 628;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

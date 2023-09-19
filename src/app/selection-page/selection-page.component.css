@@ -1,0 +1,53 @@
+.header{
+    padding: 2em;
+}
+
+
+.btn-primary {
+    --bs-btn-color: #000000;
+    --bs-btn-bg: #ffffff;
+    --bs-btn-border-color: #ffffff;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #bdbdbd;
+    --bs-btn-hover-border-color: #bdbdbd;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #ffffff;
+    --bs-btn-active-border-color: #ffffff;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000000;
+    --bs-btn-disabled-bg: #909090;
+    --bs-btn-disabled-border-color: #909090;
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+.title{
+    font-size: 5em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 1em;
+    color: #717171;
+}
+
+.tile{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.row{
+    padding: 2em ;
+}
+
+.cards{
+    display: flex;
+}
+
+.card-text{
+    font-size: 1.5em;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+}
