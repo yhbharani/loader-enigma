@@ -19,6 +19,8 @@ export class LoadersComponent implements OnInit {
   private loaderPaths: { [key: number]: string } = {
     5: '/assets/loaders/hamster.json',
     6: '/assets/loaders/hamster.json',
+    11: '/assets/loaders/Bear.json',
+    12: '/assets/loaders/Bear.json',
   };
 
   showLottieAnimation: boolean = true;  // By default, show the Lottie animation
@@ -38,7 +40,7 @@ export class LoadersComponent implements OnInit {
     this.duration = durationParam ? +durationParam : 0;  // default to 0 if null
 
     // Determine whether to show Lottie animation or custom div
-    this.showLottieAnimation = ![1,2,3,4,7,8].includes(this.loaderId);
+    this.showLottieAnimation = ![1,2,3,4,7,8,9,10].includes(this.loaderId);
 
     if (this.showLottieAnimation) {
       // Set the path for the animation based on loaderId

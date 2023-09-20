@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { P5SketchComponent } from './p5-sketch/p5-sketch.component';
+import { ParticleAnimationComponent } from './particle-animation/particle-animation.component';
 
 export function playerFactory() {
   return player;
@@ -23,6 +24,7 @@ export function playerFactory() {
     SelectionPageComponent,
     LoadersComponent,
     P5SketchComponent,
+    ParticleAnimationComponent,
   ],
   imports: [
     BrowserModule,

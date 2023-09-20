@@ -5,6 +5,9 @@
       <div *ngIf="loaderId === 6" class="percentage-json">
         {{ currentPercentage }}%
       </div>
+      <div *ngIf="loaderId === 12" class="percentage-json">
+        {{ currentPercentage }}%
+      </div>
     </div>
 
     <!-- Lottie Animation for default case -->
@@ -70,5 +73,16 @@
       <div class="instruction">Move cursor <br> to interact</div>
       <div class="percentage-mandala">{{ currentPercentage }}%</div>          
     </div>
+
+    <div *ngSwitchCase="9">
+      <div class="loading">
+        Loading ...
+      </div>     
+    </div>
+
+    <div *ngSwitchCase="10">
+      <app-particle-animation></app-particle-animation>     
+    </div>
+
   </div>
 </div>

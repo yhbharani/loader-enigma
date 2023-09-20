@@ -18,6 +18,10 @@ export class SelectionPageComponent implements OnInit {
     { id: 6, thumbnail: 'assets/thumbnail.gif', name: 'Loader 6', duration: 10, seen: false },
     { id: 7, thumbnail: 'assets/thumbnail.gif', name: 'Loader 7', duration: 10, seen: false },
     { id: 8, thumbnail: 'assets/thumbnail.gif', name: 'Loader 8', duration: 10, seen: false },
+    { id: 9, thumbnail: 'assets/thumbnail.gif', name: 'Loader 9', duration: 10, seen: false },
+    { id: 10, thumbnail: 'assets/thumbnail.gif', name: 'Loader 10', duration: 10, seen: false },
+    { id: 11, thumbnail: 'assets/thumbnail.gif', name: 'Loader 11', duration: 10, seen: false },
+    { id: 12, thumbnail: 'assets/thumbnail.gif', name: 'Loader 12', duration: 10, seen: false },
   ];
 
   isHover: boolean = false;
