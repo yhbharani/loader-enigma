@@ -1,4 +1,4 @@
-import { Component , OnInit } from '@angular/core';
+import { Component , NgZone, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
@@ -17,10 +17,8 @@ export class LoadersComponent implements OnInit {
 
   // Mapping of loader IDs to their respective JSON paths
   private loaderPaths: { [key: number]: string } = {
-    5: '/assets/loaders/cat.json',
-    6: '/assets/loaders/elephant.json',
-    7: '/assets/loaders/panda.json',
-    8: '/assets/loaders/Bear.json',
+    5: '/assets/loaders/hamster.json',
+    6: '/assets/loaders/hamster.json',
   };
 
   showLottieAnimation: boolean = true;  // By default, show the Lottie animation
@@ -29,7 +27,8 @@ export class LoadersComponent implements OnInit {
     path: '',  // Initialize with an empty string; it will be set in ngOnInit
   };
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private ngZone: NgZone) { }
+  
 
   ngOnInit(): void {
     const idParam = this.route.snapshot.paramMap.get('id');
@@ -39,7 +38,7 @@ export class LoadersComponent implements OnInit {
     this.duration = durationParam ? +durationParam : 0;  // default to 0 if null
 
     // Determine whether to show Lottie animation or custom div
-    this.showLottieAnimation = ![1,2,3,4].includes(this.loaderId);
+    this.showLottieAnimation = ![1,2,3,4,7,8].includes(this.loaderId);
 
     if (this.showLottieAnimation) {
       // Set the path for the animation based on loaderId

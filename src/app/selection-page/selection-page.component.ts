@@ -10,15 +10,17 @@ import { Router } from '@angular/router';
 export class SelectionPageComponent implements OnInit {
 
   loaders = [
-    { id: 1, thumbnail: 'assets/loader.jpg', name: 'Loader 1', duration: 5, seen: false },
-    { id: 2, thumbnail: 'assets/loader.jpg', name: 'Loader 2', duration: 15, seen: false },
-    { id: 3, thumbnail: 'assets/loader.jpg', name: 'Loader 3', duration: 1, seen: false },
-    { id: 4, thumbnail: 'assets/loader.jpg', name: 'Loader 4', duration: 10, seen: false },
-    { id: 5, thumbnail: 'assets/loader.jpg', name: 'Loader 5', duration: 5, seen: false },
-    { id: 6, thumbnail: 'assets/loader.jpg', name: 'Loader 6', duration: 5, seen: false },
-    { id: 7, thumbnail: 'assets/loader.jpg', name: 'Loader 7', duration: 5, seen: false },
-    { id: 8, thumbnail: 'assets/loader.jpg', name: 'Loader 8', duration: 5, seen: false },
+    { id: 1, thumbnail: 'assets/thumbnail.gif', name: 'Loader 1', duration: 10, seen: false },
+    { id: 2, thumbnail: 'assets/thumbnail.gif', name: 'Loader 2', duration: 10, seen: false },
+    { id: 3, thumbnail: 'assets/thumbnail.gif', name: 'Loader 3', duration: 10, seen: false },
+    { id: 4, thumbnail: 'assets/thumbnail.gif', name: 'Loader 4', duration: 10, seen: false },
+    { id: 5, thumbnail: 'assets/thumbnail.gif', name: 'Loader 5', duration: 10, seen: false },
+    { id: 6, thumbnail: 'assets/thumbnail.gif', name: 'Loader 6', duration: 10, seen: false },
+    { id: 7, thumbnail: 'assets/thumbnail.gif', name: 'Loader 7', duration: 10, seen: false },
+    { id: 8, thumbnail: 'assets/thumbnail.gif', name: 'Loader 8', duration: 10, seen: false },
   ];
+
+  isHover: boolean = false;
 
   
   constructor(private router: Router) { }

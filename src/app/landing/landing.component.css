@@ -2,6 +2,7 @@
     padding: 4em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .col{
@@ -12,6 +13,7 @@
     width: 200px;
     height: 100px;
     overflow: hidden;
+    display:contents;
 }
 
 .idc-logo img{
@@ -21,8 +23,9 @@
 }
 
 .subject{
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-style: normal;
+    color: #3C3C3C;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 3.2px;
@@ -32,11 +35,16 @@
 
 .maamla{
     text-align: center;
+    position: absolute;
     padding-top: 2em;
     display: flex;           
     flex-direction: column;  
     justify-content: center;
-    align-items: center;     
+    align-items: center;  
+    padding: 7em;   
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%
 }
 
 .title{
@@ -49,28 +57,26 @@
 }
 
 .subtitle{
-    font-size: 2em;
+    font-size: 1.8em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center; 
-    padding: 3em;
+    padding: 1.2em;
 }
 
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #000000;
-    --bs-btn-border-color: #000;
+    --bs-btn-bg: #DA0B77;
+    --bs-btn-border-color: #DA0B77;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #2b2b2b;
-    --bs-btn-hover-border-color: #2b2b2b;
+    --bs-btn-hover-bg: #F12A92;
+    --bs-btn-hover-border-color: #F12A92;
     --bs-btn-focus-shadow-rgb: 49,132,253;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #000;
-    --bs-btn-active-border-color: #000;
+    --bs-btn-active-bg: #F12A92;
+    --bs-btn-active-border-color: #F12A92;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #909090;
-    --bs-btn-disabled-border-color: #909090;
     font-size: 1.5em;
+    margin: .4em;
 }

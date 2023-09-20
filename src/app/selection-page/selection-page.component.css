@@ -1,15 +1,15 @@
 .header{
-    padding: 2em;
+    padding: 1em;
 }
 
 
 .btn-primary {
     --bs-btn-color: #000000;
-    --bs-btn-bg: #ffffff;
-    --bs-btn-border-color: #ffffff;
-    --bs-btn-hover-color: #000000;
-    --bs-btn-hover-bg: #bdbdbd;
-    --bs-btn-hover-border-color: #bdbdbd;
+    --bs-btn-bg: #f0f0f0;
+    --bs-btn-border-color: #f0f0f0;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #da0b77;
+    --bs-btn-hover-border-color: #da0b77;
     --bs-btn-focus-shadow-rgb: 49,132,253;
     --bs-btn-active-color: #000000;
     --bs-btn-active-bg: #ffffff;
@@ -20,33 +20,42 @@
     --bs-btn-disabled-border-color: #909090;
     font-size: 1.5em;
     margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title{
-    font-size: 5em;
+    font-size: 3em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     padding: 1em;
     color: #717171;
+    padding-top: 2em;
+    text-align: center;
 }
 
 .tile{
     display: flex;
     justify-content: center;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
 .row{
-    padding: 2em ;
+    padding: 0.5em ;
 }
 
 .cards{
     display: flex;
 }
 
+.card-img-top{
+    width: 286 px; height: 286 px; background-color: #eeeeee;
+}
+
 .card-text{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 600;
     justify-content: center;
     text-align: center;

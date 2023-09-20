@@ -1,17 +1,18 @@
 <div class="row header">
   <div class="col reset">
-    <button class="btn btn-primary" (click)="resetSession()">
-      <img src="assets/Back.png" style="width: 24px; margin: 10px;">Reset
+    <button class="btn btn-primary" (click)="resetSession()" (mouseenter)="isHover = true"
+    (mouseleave)="isHover = false">
+      <img [src]="isHover ? 'assets/Back_hover.png' : 'assets/Back.png'" style="width: 30px; margin: 10px; padding-right: 5px;">
+      Reset &nbsp;&nbsp; 
     </button>
-  </div>  
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-4 title">
+<div class="container-fluid" style="padding-left: 0; padding-right: 5em;">
+  <div class="row" style="display: flex;">
+    <div class="col-lg-5 title">
       Select the loader
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-7">
       <div class="row cards">
         <div class="col-lg-3 tile" *ngFor="let loader of loaders">
           <div class="card" style="width: 18rem;" (click)="selectLoader(loader.id, loader.duration)">
